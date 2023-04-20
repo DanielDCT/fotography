@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.o">
+    <meta name="author" lang="es" content="Calderón Tinjaca Daniel David">
+    <meta name="keywords" content="fotografia, fotografo, camara, camarográfo">
+    <meta name="description" content="Bienvenidos a mi portafolio personal con todos mis proyectos fotograficos, espero les guste.">
+    <meta name="copyright" content="Copyright Daniel David Calderón Tinjaca">  
+    <!--  Animaciones de entrada  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Animaciones al hacer scrooll -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/logo.png" type="image/png" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Fotography</title>
+</head>
+<body>
+    <header>
+        <a href="#inicio" class="logo">Portafolio</a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="#inicio" onclick="toggleMenu();">Inicio</a></li>
+            <li><a href="#sobremi" onclick="toggleMenu();">Sobre mi</a></li>
+            <li><a href="#galeria" onclick="toggleMenu();">Galeria</a></li>
+            <li><a href="#testimonios" onclick="toggleMenu();">Testimonios</a></li>
+            <li><a href="#contacto" onclick="toggleMenu();">Contacto</a></li>
+        </ul>
+    </header>
+
+    <section class="sec-banner" id="inicio">
+        <div class="contenido-bn">
+                <h1 class="titulo animate__animated animate__zoomInDown">Portafolio</h1>
+                <h2 class="nombre profesion animate__animated animate__zoomIn">Fotografo profesional</h2>
+                <span class="nombre animate__animated animate__zoomIn">Daniel David Calderón Tinjaca</span>
+        </div>
+    </section>
+
+    <!-- ************************************** SECCION 3 - SOBRE MI (ABOUT) **************************************  -->
+
+    <section class="sobre-mi" id="sobremi">
+        <div class="titulos">
+            <h2>Sobre Mi</h2>
+        </div> 
+        <div class="content">
+            <div class="img-about">
+                <img src="img/about.jpg" alt="" srcset="">
+            </div>
+            <div class="info-about">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente alias est adipisci, 
+                maxime doloremque vero, iure cupiditate labore excepturi numquam voluptates amet voluptatum! 
+                Error maiores corporis ex vel molestias repellendus. 
+                <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente alias est adipisci, 
+                maxime doloremque vero, iure cupiditate labore excepturi numquam voluptates amet voluptatum! 
+                Error maiores corporis ex vel molestias repellendus.</p>
+            </div>
+        </div>
+        <div class="cont-tipos">
+
+            <article class="location-listing">
+                <div class="location-title">Fotografía de Retrato</div>
+            <div class="location-image">
+                <div>
+                    <img src="img/foto-retrato.jpg" alt="Fotografía-de-Retrato"></div>
+            </div>
+            </article>
+        
+            <article class="location-listing">
+                <div class="location-title">Fotografía de Bodas</div>
+            <div class="location-image">
+                <div>
+                    <img src="img/foto-bodas.jpg" alt="Fotografía-de-Bodas"></div>
+            </div>
+            </article>
+        
+            <article class="location-listing">
+                <div class="location-title">Fotografía Artistica</div>
+            <div class="location-image">
+                <div>
+                    <img src="img/foto-artistica.jpg" alt="Fotografía-Artistica"></div>
+            </div>
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- ************************************** FIN SECCION 3 - SOBRE MI (ABOUT) **************************************  -->
+
+    <!-- ************************************** SECCION 3 - SOBRE MI (ABOUT) **************************************  -->
+
+    <section class="galeria" id="galeria">
+        <div class="titulos">
+            <h2>Mi Trabajo</h2>
+        </div> 
+        <div class="grid-gallery">
+            <div class="grid-gallery__item">
+                <img class="grid-gallery__image" id="foto1" src="img/galeria/foto1.jpg">
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                </div>
+            </div>
+
+            <div class="grid-gallery__item">
+                <img class="grid-gallery__image" id="foto2" src="img/galeria/foto2.jpg">
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                </div>
+            </div>
+
+            <div class="grid-gallery__item">
+                <img class="grid-gallery__image" id="foto3" src="img/galeria/foto4.jpg">
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                </div>
+            </div>
+
+            <div class="grid-gallery__item">
+                <img class="grid-gallery__image" id="foto4" src="img/galeria/foto9.jpg">
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                </div>
+            </div>
+
+            <div class="grid-gallery__item">
+                <img class="grid-gallery__image" id="foto5" src="img/galeria/foto7.jpg">
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                </div>
+            </div>
+
+            <div class="grid-gallery__item">
+                <img class="grid-gallery__image" id="foto6" src="img/galeria/foto3.jpg">
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                </div>
+            </div>
+
+            <div class="grid-gallery__item">
+                <img class="grid-gallery__image" id="foto7" src="img/galeria/foto6.jpg">
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                </div>
+            </div>
+
+            <div class="grid-gallery__item">
+                <img class="grid-gallery__image" id="foto8" src="img/galeria/foto8.jpg">
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                </div>
+            </div>
+
+            <div class="grid-gallery__item">
+                <img class="grid-gallery__image" id="foto9" src="img/galeria/foto5.jpg">
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                </div>
+            </div>
+
+            <div class="grid-gallery__item">
+                <img class="grid-gallery__image" id="foto10" src="img/galeria/foto10.jpg">
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                </div>
+            </div>
+
+            <div class="grid-gallery__item">
+                <img class="grid-gallery__image" id="foto11" src="img/galeria/foto11.jpg">
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img1">
+                </div>
+            </div>
+
+            <div class="grid-gallery__item">
+                <img class="grid-gallery__image" id="foto12" src="img/galeria/foto12.jpg">
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img1">
+                </div>
+            </div>
+
+            <div class="grid-gallery__item">
+                <img class="grid-gallery__image" id="foto13" src="img/galeria/foto13.jpg">
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img1">
+                </div>
+            </div>
+
+            <div class="grid-gallery__item">
+                <img class="grid-gallery__image" id="foto14" src="img/galeria/foto14.jpg">
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                </div>
+            </div>
+
+            <div class="grid-gallery__item">
+                <img class="grid-gallery__image" id="foto15" src="img/galeria/foto15.jpg">
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img1">
+                </div>
+            </div>
+
+            <div class="grid-gallery__item">
+                <img class="grid-gallery__image" id="foto16" src="img/galeria/foto16.jpg">
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img1">
+                </div>
+            </div>
+
+            <div class="grid-gallery__item">
+                <img class="grid-gallery__image" id="foto17" src="img/galeria/foto17.jpg">
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img1">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ************************************** SECCION 4 - TESTIMONIOS **************************************  -->
+
+    <section class="testimonios" id="testimonios"> 
+        <div class="titulos">
+            <h2>Testimonios</h2>
+        </div> 
+        <div class="slider__container container">
+            <img src="img/fleft.png" class="slider__arrow" id="before">
+
+            <section class="slider__body slider__body--show" data-id="1">
+                <div class="slider__texts">
+                    <h2 class="subtitulo">Maria Fernanda Guzman Fernandez</h2>
+                    <p class="testimonio__text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim obcaecati laudantium a atque suscipit, 
+                    in eos fugiat omnis aspernatur asperiores corporis veniam rem. Accusamus deleniti quae, rerum sit sed 
+                    ea obcaecati iste officiis.
+                    </p>
+                </div>
+                <figure class="slider__picture">
+                    <img src="img/galeria/foto1.jpg" class="slider__img">
+                </figure>
+            </section>
+
+            <section class="slider__body" data-id="2">
+                <div class="slider__texts">
+                    <h2 class="subtitulo">Paula Lorena Bermudez Fernandez</h2>
+                    <p class="testimonio__text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim obcaecati laudantium a atque suscipit, 
+                    in eos fugiat omnis aspernatur asperiores corporis veniam rem. Accusamus deleniti.
+                    </p>
+                </div>
+                <figure class="slider__picture">
+                    <img src="img/galeria/foto2.jpg" class="slider__img">
+                </figure>
+            </section>
+
+            <section class="slider__body" data-id="3">
+                <div class="slider__texts">
+                    <h2 class="subtitulo">Maria Laura Perez Guzman</h2>
+                    <p class="testimonio__text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim obcaecati laudantium a atque suscipit, 
+                    in eos fugiat omnis aspernatur asperiores corporis veniam rem. Accusamus deleniti quae, rerum sit sed 
+                    ea obcaecati iste officiis, rerum sit sed ea obcaecati iste officiis.
+                    </p>
+                </div>
+                <figure class="slider__picture">
+                    <img src="img/galeria/foto3.jpg" class="slider__img">
+                </figure>
+            </section>
+
+            <img src="img/frigth.png" class="slider__arrow" id="next">
+        </div>
+    </section>
+
+    <!-- ************************************** FIN SECCION 4 - TESTIMONIOS **************************************  -->
+
+    <!-- ************************************** SECCION 5 - CONTACTO **************************************  -->
+
+    <section class="sec-contacto" id="contacto">
+        <div class="titulos ct">
+            <h2>Contacto</h2>
+        </div> 
+        <div class="content">
+            <div class="contactinfo">
+                <h3 class="subtitulo">Información de Contacto</h3>
+                <div class="contactinfobx">
+                    <div class="box">
+                    <div class="icon">
+                        <i class="fa fa-map-marker"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Dirección</h3>
+                        <p>Colombia <br> Villeta - Cundinamarca</p>
+                    </div>
+                    </div>
+
+                    <div class="box">
+                    <div class="icon">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                        <div class="text">
+                        <h3>Celular</h3>
+                        <p>+57 321461519</p>
+                    </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="text">
+                        <h3>E-mail</h3>
+                        <p>hamburking@gmail.com</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="formbx">
+                <form>
+                    <input type="text" name="" placeholder="Nombre completo">
+                    <input type="email" name="" placeholder="Email">
+                    <textarea placeholder="Mensaje"></textarea>
+                    <input type="submit" class="btnenviar" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="copyright">
+        <p>Copyright © 2023 Daniel David Calderón Tinjaca. Todos los derechos reservados</p>
+    </div>
+
+
+    <script src="js/slider.js"></script>
+    <script src="js/modal.js"></script>
+
+    <!--  SCRIPT BARRA DE NAVEGACIÓN  -->
+    <script type="text/javascript">
+        window.addEventListener('scroll', function(){
+            var header = document.querySelector(`header`);
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var menu = document.querySelector('.menu');
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,986 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    scroll-behavior: smooth;
+    }
+
+body {
+    background: rgb(114,86,50);
+    }
+
+/* BARRA DE NAVEGACIÓN */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    }
+
+header.sticky {
+    background: rgb(83, 61, 33);
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+.logonav {
+    width: 30px;
+    margin-right: 6px;
+    }
+
+header .logo {
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+    }
+
+header.sticky .logo {
+    color: aliceblue;
+    }
+
+header ul {
+    position: relative;
+    display: flex;
+    }
+
+header ul li {
+    position: relative;
+    list-style: none;
+    }
+
+header ul li a {
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    transition: .5s;
+    }
+
+header ul li a:hover {
+    transition: .5s;
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+    }
+
+header.sticky ul li a {
+    color: aliceblue;
+    }
+
+
+ul li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    border: 4px;
+    scale: .1;
+    transform-origin: left;
+    transition: scale .25s;
+    }
+
+ul li a:hover::before {
+    scale: 1;
+    }
+
+
+/* ******************** FIN BARRA DE NAVEGACIÓN ******************** */
+
+/* ********************  SECCION 1 - SECCION BANNER ******************** */
+
+.titulos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    border-bottom: 4px solid rgb(158, 152, 118);
+    }
+
+.sec-banner {
+    background: url(../img/banner.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 90px;
+    }
+
+.contenido-bn {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    backdrop-filter: blur(1px);
+    }
+
+.sec-banner .titulo {
+    font-family: 'Permanent Marker', cursive;
+    color: aliceblue;
+    font-size: 80px;
+    letter-spacing: 2px;
+    }
+
+.sec-banner .nombre {
+    font-size: 13px;
+    color: rgb(215, 217, 218);
+    font-weight: 600;
+    }
+
+.sec-banner .profesion {
+    font-size: 23px;
+    color: rgb(215, 217, 218);
+    }
+
+/* ******************** SECCION 2 - SECCION ABOUT ******************** */
+
+.sobre-mi {
+    width: 100%;
+    min-height: max-content;
+    background-color: rgb(114,86,50);
+    padding: 90px;
+    }
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    }
+
+.img-about {
+    min-width: 30%;
+    display: flex;
+    }
+
+.img-about img {
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    width: 100%;
+    }
+
+.info-about {
+    min-width: 70%;
+    }
+
+.info-about p {
+    font-size: 20px;
+    color: aliceblue;
+    padding: 0 0 0 20px;
+    line-height: 1.8;
+    }
+
+.cont-tipos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 40px;
+    }
+
+.location-listing {
+    position: relative;
+    }
+
+.location-image {
+    line-height: 0;
+    overflow: hidden;
+    }
+
+.location-image img {
+    filter: blur(0px);
+    transition: filter 0.3s ease-in;
+    transform: scale(1.1);
+    width: 400px;
+    }
+
+.location-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .5s;
+    background: rgba(90,0,10,0.4);
+    color: white;
+    /* position the text in t’ middle*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+.location-listing:hover .location-title {
+    opacity: 1;
+    }
+
+.location-listing:hover .location-image img {
+    filter: blur(2px);
+    }
+
+    /* for touch screen devices */
+    @media (hover: none) { 
+        .location-title {
+            opacity: 1;
+            }
+
+        .location-image img {
+            filter: blur(2px);
+            }
+    }
+
+/* ******************** SECCION 3 - SECCION GALERIA ******************** */
+
+.galeria {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(88, 64, 33);
+    padding: 90px;
+    }
+
+.grid-gallery {
+    display: grid;
+    grid-auto-rows: 200px;
+    gap: 1rem;
+    grid-auto-flow: row dense;
+    }
+
+    @media all and (min-width: 320px) {
+    .grid-gallery {
+        grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    @media all and (min-width: 768px) {
+    .grid-gallery {
+        grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media all and (min-width: 1024px) {
+    .grid-gallery {
+        grid-template-columns: repeat(6, 1fr);
+        }
+    }
+
+.grid-gallery__item:nth-child(11n+1) {
+    grid-column: span 1;
+    }
+
+.grid-gallery__item:nth-child(11n+4) {
+    grid-column: span 3;
+    grid-row: span 1;
+    }
+
+.grid-gallery__item:nth-child(11n+6) {
+    grid-column: span 3;
+    grid-row: span 1;
+    }
+
+.grid-gallery__item:nth-child(11n+7) {
+    grid-column: span 1;
+    grid-row: span 2;
+    }
+
+.grid-gallery__item:nth-child(11n+8) {
+    grid-column: span 2;
+    grid-row: span 2;
+    }
+
+.grid-gallery__item:nth-child(11n+9) {
+    grid-row: span 2;
+    }
+
+.grid-gallery__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .3s;
+    }
+
+.grid-gallery__image:hover{
+    transform: scale(1.02);
+    z-index: 999;
+    }
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: none; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    object-fit: contain;
+    }
+
+/* Add Animation */
+.modal-content, .caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    }
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    }
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+    }
+
+/* ******************** SECCION 4 - SECCION TESTIMONIOS ******************** */
+
+.testimonios {
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(114, 86, 50, 0.579) 20%, rgba(114, 86, 50, 0.574) 90%),url(../img/banner2.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 90px;
+    }
+
+.container {
+    width: 100%;
+    min-height: 60vh;
+    max-width: 1200px;
+    margin: 25px auto;
+    overflow: hidden;
+    }
+
+.slider__container {
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    align-items: center;
+    gap: 1em;
+    }
+
+.slider__body {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    opacity: 0;
+    pointer-events: none;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    align-items: center;
+    transition: opacity .3s;
+    }
+
+.slider__body--show {
+    opacity: 1;
+    pointer-events: unset;
+    }
+
+.slider__texts {
+    max-width: 700px;
+    color: aliceblue;
+    }
+
+.subtitulo {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    }
+
+.testimonio__text {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.7;
+    }
+
+.slider__img {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    }
+
+.slider__arrow {
+    width: 90%;
+    cursor: pointer;
+    filter: invert(1);
+    }
+
+.slider__arrow:nth-of-type(2){
+    justify-self: end
+    }
+
+/* ******************** SECCION 5 - SECCION CONTACTO ******************** */
+
+.sec-contacto {
+    background: rgb(83, 63, 37);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    padding: 90px;
+    }
+
+.ct {
+    color: #e5e5e5;
+    }
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    }
+
+.contactinfo {
+    min-width: 30%;
+    }
+
+.contactinfobx {
+    position: relative;
+    }
+
+.contactinfobx .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    }
+
+.contactinfobx .box .icon {
+    min-width: 40px;
+    padding-top: 4px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 24px;
+    }
+
+.contactinfobx .box .text {
+    display: flex;
+    margin-left: 10px;
+    font-size: 15px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+    }
+
+.contactinfobx .box .text h3 {
+    font-weight: 500;
+    color: #b09b24;
+    }
+
+.formbx {
+    min-width: 70%;
+    }
+
+.formbx form {
+    display: flex;
+    flex-direction: column;
+    }
+    
+.formbx form h3,
+.contactinfo h3 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    }
+
+.formbx form input,
+.formbx form textarea {
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: rgb(102, 77, 44);
+    color: #fff;
+    resize: none;
+    }
+
+.formbx form textarea {
+    height: 200px;
+    }
+
+.formbx form input::placeholder,
+.formbx form textarea::placeholder {
+    color: #999
+    }
+
+.formbx .btnenviar {
+    max-width: 160px;
+    background: rgb(118, 86, 45);
+    cursor: pointer;
+    letter-spacing: 2px;
+    border-radius: 15px;
+    transition: .3s ease-in-out;
+    }
+
+.formbx .btnenviar:hover {
+    background: rgb(180, 137, 80);
+    border-radius: 2px;
+    }
+
+/* ******************** FIN SECCION 5 - SECCION CONTACTO ******************** */
+
+.copyright {
+    background: rgb(102, 77, 44);
+    color: #ffffff88;
+    text-align: center;
+    padding: 10px;
+    }
+
+
+@media (max-width: 991px) {
+    header,
+    header.sticky {
+        padding: 20px 20px;
+        z-index: 1000;
+        }
+
+    .menu {
+        position: fixed;
+        top: 75px;
+        left: -100%;
+        display: block;
+        padding: 100px 50px;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        background: rgb(83, 61, 33);
+        transition: 0.5s;
+        z-index: 999;
+        border-top: 1px solid rgba(0,0,0,0.2);
+        overflow: auto;
+        }
+
+    .logonav {
+        width: 22px;
+        }
+
+    header .logo {
+        margin-left: 0px;
+        font-size: 18px;
+        }
+
+    .menu.active {
+        left: 0;
+        }
+
+    header ul li a {
+        color: aliceblue;
+        font-size: 24px;
+        margin: 10px;
+        }
+
+    .toggle {
+        width: 40px;
+        height: 40px;
+        background-image: url("../img/menu.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+        }
+
+    .toggle.active {
+        background-image: url("../img/close.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        cursor: pointer;
+        }
+
+    .img-about {
+        min-width: 100%;
+        }
+
+    .content {
+        display: block;
+        margin-top: 50px;
+        }
+
+    .info-about {
+        min-width: 100%;
+        }
+
+    .info-about p {
+        font-size: 20px;
+        padding: 10px 0 10px 0;
+        }
+
+    .cont-tipos {
+        gap: 20px;
+        }
+
+    .location-image img {
+        width: 320px;
+        }
+}
+
+@media (max-width: 780px){
+    .slider__body {
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 1fr;
+        gap: 1em;
+        }
+
+    .slider_picture {
+        grid-row: 1/2;
+        }
+
+    .slider__img {
+        width: 180px;
+        height: 180px;
+        }
+}
+
+
+@media (max-width: 600px){
+    .sec-banner, .sobre-mi, .galeria, .testimonios, .sec-contacto {
+        padding: 85px 20px;
+        }
+
+    .titulos {
+        font-size: 16px;
+        }
+
+/* ******************** SECCION 1 - SECCION BANNER ******************** */
+
+    .contenido-bn {
+        height: 200px;
+        }
+
+    .sec-banner .titulo {
+        font-size: 30px;
+        letter-spacing: 2px;
+        }
+
+    .sec-banner .titulo::before {
+        left: 30%;
+        width: 40%;
+        }
+
+    .sec-banner .nombre {
+        font-size: 10px;
+        text-align: center;
+        }
+
+    .sec-banner .profesion {
+        font-size: 15px;
+        }
+
+/* ******************** SECCION 2 - SECCION SOBRE MI ******************** */
+
+    .info-about p {
+        font-size: 16px;
+        text-align: justify;
+        word-spacing: 0px;
+        padding: 10px 0 10px 0;
+        line-height: 1.6;
+        }
+
+    .location-image img {
+        filter: blur(0px);
+        transition: filter 0.3s ease-in;
+        transform: scale(1.1);
+        width: 280px;
+        }
+
+    .location-title {
+        font-size: 1.1em;
+        }
+
+/* ******************** SECCION 3 - SECCION GALERIA ******************** */
+
+    .grid-gallery {
+        display: grid;
+        grid-auto-rows: 150px;
+        gap: .4rem;
+        grid-auto-flow: row dense;
+        }
+
+    .grid-gallery__item:nth-child(11n+1) {
+        grid-column: span 3;
+        }
+
+    .grid-gallery__item:nth-child(11n+4) {
+        grid-column: span 4;
+        grid-row: span 1;
+        }
+
+    .grid-gallery__item:nth-child(11n+6) {
+        grid-column: span 1;
+        grid-row: span 1;
+        }
+
+    .grid-gallery__item:nth-child(11n+7) {
+        grid-column: span 2;
+        grid-row: span 1;
+        }
+
+    .grid-gallery__item:nth-child(11n+8) {
+        grid-column: span 3;
+        grid-row: span 1;
+        }
+
+    .grid-gallery__item:nth-child(11n+9) {
+        grid-column: span 4;
+        grid-row: span 1;
+        }
+
+    .modal-content {
+        width: 80%;
+        }
+
+/* ******************** SECCION 4 - SECCION TESTIMONIOS ******************** */
+
+    .slider__container {
+        grid-template-columns: 25px 1fr 25px;
+        }
+
+    .slider__arrow {
+        width: 100%;
+        }
+
+    .slider__img {
+        width: 180px;
+        height: 180px;
+        }
+
+    .subtitulo {
+        font-size: 1rem;
+        margin-bottom: 15px;
+        text-align: center;
+        }
+
+    .testimonio__text {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: center;
+        }
+
+/* ******************** SECCION 5 - SECCION CONTACTO ******************** */
+
+    .contactinfobx .box .icon {
+        font-size: 20px;
+        }
+
+    .contactinfobx .box .text {
+        margin-left: 5px;
+        font-size: 14px;
+        }
+
+    .formbx form h3,
+    .contactinfo h3 {
+        font-size: 14px;
+        }
+
+    .formbx form input,
+    .formbx form textarea {
+        font-size: 14px;
+        }
+
+    .formbx .btnenviar {
+        max-width: 100%;
+        }
+
+    .copyright {
+        font-size: 11px;
+        }
+}
+@media (max-width: 991px) and (max-height:321px){
+
+    .menu {
+        padding: 10px 50px;
+        }
+
+    header ul li a {
+        font-size: 16px;
+        }
+
+    .titulos {
+        font-size: 16px;
+        }
+
+    .sec-banner, .sobre-mi, .galeria, .testimonios, .sec-contacto {
+        padding: 85px 20px;
+        }
+
+/* ******************** SECCION 1 - SECCION BANNER ******************** */
+
+    .contenido-bn {
+        height: 200px;
+        }
+
+    .sec-banner .titulo {
+        font-size: 30px;
+        letter-spacing: 2px;
+        }
+
+    .sec-banner .titulo::before {
+        left: 31%;
+        top: 2px;
+        width: 35%;
+        }
+
+    .sec-banner .nombre {
+        font-size: 10px;
+        text-align: center;
+        }
+
+    .sec-banner .profesion {
+        font-size: 14px;
+        }
+
+/* ******************** SECCION 2 - SECCION SOBRE MI ******************** */
+
+    .info-about p {
+        font-size: 13px;
+        text-align: justify;
+        }
+
+    .location-image img {
+        width: 215px;
+        }
+
+    .location-title {
+        font-size: 1em;
+        }
+
+/* ******************** SECCION 3 - SECCION GALERIA ******************** */
+
+    .grid-gallery {
+        grid-auto-rows: 150px;
+        }
+
+    .grid-gallery__item:nth-child(11n+1) {
+        grid-column: span 1;
+        }
+
+    .grid-gallery__item:nth-child(11n+4) {
+        grid-column: span 2;
+        grid-row: span 1;
+        }
+
+    .grid-gallery__item:nth-child(11n+6) {
+        grid-column: span 1;
+        grid-row: span 1;
+        }
+
+    .grid-gallery__item:nth-child(11n+7) {
+        grid-column: span 1;
+        grid-row: span 1;
+        }
+
+    .grid-gallery__item:nth-child(11n+8) {
+        grid-column: span 1;
+        grid-row: span 2;
+        }
+
+    .grid-gallery__item:nth-child(11n+9) {
+        grid-row: span 1;
+        }
+
+    .modal {
+        padding-top: 50px;
+        overflow: auto;
+        }
+
+    .modal-content {
+        width: 200px;
+        }
+
+/* ******************** SECCION 4 - SECCION TESTIMONIOS ******************** */
+
+    .slider__container {
+        grid-template-columns: 25px 1fr 25px;
+        }
+
+    .slider__arrow {
+        width: 100%;
+        }
+
+    .slider__img {
+        width: 180px;
+        height: 180px;
+        }
+
+    .subtitulo {
+        font-size: 1rem;
+        margin-bottom: 15px;
+        text-align: center;
+        }
+
+    .testimonio__text {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: center;
+        }
+
+    .copyright {
+        font-size: 14px;
+        }
+}
